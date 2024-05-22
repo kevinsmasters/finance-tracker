@@ -2,7 +2,8 @@
 
 .navbar {
   background-color: #000000!important;
-  a.nav-link {
+  a.nav-link,
+  a.navbar-brand {
     color: #ffffff!important;
   }
   #logo {
@@ -15,6 +16,9 @@
   }
 }
 
+.logout-button {
+  margin-right: 5px;
+}
 .search-area {
   padding-top: 50px;
 }

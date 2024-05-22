@@ -14,9 +14,12 @@
   <% end %>
 </div>
 <% if @stock %>
-  <div class="card card-header results-block">
+  <div class="card card-header results-block mb-3">
     <strong>Symbol: </strong> <%= @stock.ticker %>
     <strong>Name: </strong> <%= @stock.name %>
     <strong>Price: </strong> <%= @stock.last_price %>
   </div>
+<% end %>
+<% if !@tracked_stocks.empty? %>
+  <%= render 'stocks/list' %>
 <% end %>
