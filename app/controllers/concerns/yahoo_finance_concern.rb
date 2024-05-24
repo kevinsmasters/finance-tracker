@@ -16,5 +16,7 @@ module YahooFinanceConcern
 
     response = http.request(request)
     puts response.read_body
+
+    return response.read_body
   end
 end

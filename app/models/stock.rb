@@ -1,4 +1,6 @@
 class Stock < ApplicationRecord
+  include YahooFinanceConcern
+
   has_many :user_stocks
   has_many :users, through: :user_stocks
 
@@ -10,7 +12,7 @@ class Stock < ApplicationRecord
     # #client.price(ticker_symbol)
     # #company_name: client.company(ticker_symbol).company_name
     # #last_price: client.price(ticker_symbol)
-    # begin 
+    # begin
     new(ticker: ticker_symbol, name: "Loch Ness Monster", last_price: 3.50)
     # rescue => exception
     #   return nil
