@@ -13,7 +13,9 @@ class Stock < ApplicationRecord
     # #company_name: client.company(ticker_symbol).company_name
     # #last_price: client.price(ticker_symbol)
     # begin
-    new(ticker: ticker_symbol, name: "Loch Ness Monster", last_price: 3.50)
+
+    stonk = stock_lookup(ticker_symbol)
+    new(ticker: ticker_symbol, name: stonk[:name], last_price: stonk[:price])
     # rescue => exception
     #   return nil
     # end
